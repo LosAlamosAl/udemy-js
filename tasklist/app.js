@@ -13,8 +13,6 @@ const clearBtn = document.querySelector('.clear-tasks');
 const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 
-loadEventListeners();
-
 function loadEventListeners() {
   document.addEventListener('DOMContentLoaded', getTasks);
   form.addEventListener('submit', addTask);
@@ -23,7 +21,9 @@ function loadEventListeners() {
   filter.addEventListener('keyup', filterTasks);
 }
 
-// Should refactor this tobe addTaskAndStoreInLS
+loadEventListeners();
+
+// Should refactor this to be addTaskAndStoreInLS
 // Pull out the code that adds the task to the DOM.
 // It can be reused.
 function addTask(e) {
