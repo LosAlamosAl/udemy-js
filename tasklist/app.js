@@ -1,3 +1,11 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-alert */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
+// @ts-nocheck
+
 // Define UI Vars
 const form = document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
@@ -45,7 +53,7 @@ function removeTask(e) {
   }
 }
 
-function clearTasks(e) {
+function clearTasks() {
   if (confirm('Sure?')) {
     while (taskList.firstChild) {
       taskList.removeChild(taskList.lastChild);
@@ -55,8 +63,8 @@ function clearTasks(e) {
 }
 
 function filterTasks(e) {
-  let kids = Array.from(taskList.children);
-  kids.forEach(function(elem) {
+  const kids = Array.from(taskList.children);
+  kids.forEach((elem) => {
     if (elem.textContent.includes(e.target.value)) {
       elem.style.display = 'block';
     } else {
@@ -75,13 +83,13 @@ function storeTask(task) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-function getTasks(e) {
+function getTasks() {
   const tasks = localStorage.getItem('tasks');
   if (tasks === null) {
     return;
   }
   const tasksArray = JSON.parse(tasks);
-  tasksArray.forEach(function(elem) {
+  tasksArray.forEach((elem) => {
     if (elem !== '') {
       const newLi = document.createElement('li');
       newLi.className = 'collection-item';
@@ -96,10 +104,10 @@ function getTasks(e) {
 }
 
 function removeTaskFromLS(task) {
-  let tasks = JSON.parse(localStorage.getItem('tasks'));
-  if (tasks === null) return;    // This really couldn't happen.
+  const tasks = JSON.parse(localStorage.getItem('tasks'));
+  if (tasks === null) return; // This really couldn't happen.
 
-  tasks.forEach(function(elem, index) {
+  tasks.forEach((elem, index) => {
     if (task === elem) {
       tasks.splice(index, 1);
     }
