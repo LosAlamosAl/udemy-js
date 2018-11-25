@@ -35,8 +35,6 @@ function newBook(e) {
   const nb = new Book(title.value, author.value, isbn.value);
   books.push(nb);
   addToList(nb);
-  console.log(nb);
-  console.log(books);
   clearForm();
 }
 
