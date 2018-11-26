@@ -19,4 +19,13 @@ I didn't save this project as I was unable to write it from scratch without watc
 
 ### Number Guesser (`number-guesser`)
 
-I was able to write theis project from scratch, whithout watching the solution videos. Again, the HTML source is provided by the instructor. The JavaScript code provides the full functionality of the application.
+I was able to write theis project from scratch, whithout watching the solution
+videos. Again, the HTML source is provided by the instructor. The JavaScript
+code provides the full functionality of the application.
+
+### Book List (`booklist`)
+
+I watched the video and duplicated the look and feel for the app. I only used
+OO JavaScript for the book itself (i.e. title, author, etc.). The instructor
+created an OO approach to the UI as well. I didn't do this initially and can't
+see the advantage to backfilling it.
